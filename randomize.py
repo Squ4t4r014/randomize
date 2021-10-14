@@ -29,7 +29,7 @@ if args.rich:
         e = n_elems[i]
 
         # 選出順位を表示
-        print(i, end = "")
+        print(i + 1, end = "")
 
         # 上罫線の表示
         j = 0
