@@ -6,5 +6,5 @@ Python >= 3.6
 
 ## Usage
 ``` shell
-$ python3 randomize.py hoge fuga piyo zura
+$ python3 randomize.py [--rich] hoge fuga piyo zura...
 ```
