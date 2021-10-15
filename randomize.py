@@ -1,13 +1,25 @@
 import argparse
 import secrets
 
+def get_elements_stdin():
+    return input().split()
+
 # 引数のパーサー
 a_parser = argparse.ArgumentParser(description="Randomize inputs.")
+a_parser.add_argument("-S", "--stdin", action="store_true", help="Get elements in stdin instead of arguments.")
 a_parser.add_argument("--rich", action="store_true", help="Provide rich view.")
+# a_parser.add_argument("--delimiter", nargs="1", default=" ", help="[NOT WORK]Specify dividing symbol.")
 a_parser.add_argument("elems", nargs="*", help="Some elements that is need randomized.")
 
 args = a_parser.parse_args()
-elems = args.elems
+
+# symbol = args.delimiter
+
+if args.stdin:
+    elems = input().split()
+else:
+    elems = args.elems
+
 n_elems = []
 
 i = len(elems)
